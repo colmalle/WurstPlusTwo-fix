@@ -43,6 +43,7 @@ DOWNLOAD THE JAR FROM THE RELEASES TAB ON THE RIGHT OF YOUR SCREEN <br>
 > the codebase is a mix of a base i wrote & a very early version of bope, over time i've learnt a lot and rewrote a lot of the pasted bope code but some still remains, especially the gui and the turok framework (for those wondering the 'leaked' version was just the bope code with a few modules and commands thrown in to make it look convincing)
 
 ### creds
+> TrvsF for the original Wurst plus two [https://github.com/TrvsF/wurstplus-two]
 > Rina (Turok) for the framework & bope [https://github.com/SirRina & https://discord.gg/teMyX8] <br>
 > Salhack & phobos for misc stuff [https://github.com/ionar2/salhack] <br>
 > tabbott for trying his best in the early stages of development <3
