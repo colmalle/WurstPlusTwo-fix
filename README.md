@@ -1,4 +1,4 @@
-# WurstPlusTwo
+# WurstPlusTwo-fix
 #### (for real this time)
 
 made public for reasons below, updates will be pushed straight to this repo, if you'd like to help feel free to make a pull request :) <br>
