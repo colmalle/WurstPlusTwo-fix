@@ -1,5 +1,6 @@
 # WurstPlusTwo-fix
-This is a fix for WurstPlusTwo since there are bugs and Travis has disappeared
+This is a fix for WurstPlusTwo since there are bugs and Travis has disappeared.
+I'm not a professional by any means but I will try to add new modules.
 
 ### Original README.md:
 #### (for real this time)
