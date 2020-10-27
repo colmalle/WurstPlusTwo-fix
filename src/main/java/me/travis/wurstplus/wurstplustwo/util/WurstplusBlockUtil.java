@@ -121,7 +121,10 @@ public class WurstplusBlockUtil {
                     return true;
                 }
             }
-
+            if (old_slot != -1) {
+                mc.player.inventory.currentItem = old_slot;
+            }
+            
         }
 
         return false;
