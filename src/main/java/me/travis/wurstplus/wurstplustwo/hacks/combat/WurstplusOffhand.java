@@ -10,6 +10,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ClickType;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSword;
 import net.minecraft.util.math.BlockPos;
 
 public class WurstplusOffhand extends WurstplusHack {
@@ -27,6 +28,7 @@ public class WurstplusOffhand extends WurstplusHack {
 
     WurstplusSetting gapple_in_hole = create("Gapple In Hole", "OffhandGapple", false);
     WurstplusSetting gapple_hole_hp = create("Gapple Hole HP", "OffhandGappleHP", 8, 0, 36);
+    WurstplusSetting gapple_on_sword = create("Gapple On Sword", "OffhandGappleSword", false);
 
     WurstplusSetting delay = create("Delay", "OffhandDelay", false);
 
@@ -52,6 +54,10 @@ public class WurstplusOffhand extends WurstplusHack {
                 }
                 if (gapple_in_hole.get_value(true) && hp > gapple_hole_hp.get_value(1) && is_in_hole()) {
                     swap_items(get_item_slot(Items.GOLDEN_APPLE), delay.get_value(true) ? 1 : 0);
+                    return;
+                }
+                if (gapple_on_sword.get_value(true) && mc.player.getHeldItemMainhand().getItem() instanceof ItemSword) {
+                	swap_items(get_item_slot(Items.GOLDEN_APPLE), delay.get_value(true) ? 1 : 0);
                     return;
                 }
                 if (switch_mode.in("Totem")) {
