@@ -33,66 +33,45 @@ public class WurstplusModuleManager {
 		add_hack(new WurstplusClickHUD());
 
 		// Chat.
-		add_hack(new WurstplusChatSuffix());
-		add_hack(new WurstplusVisualRange());
-		add_hack(new WurstplusTotempop());
-		add_hack(new WurstplusClearChat());
-		add_hack(new WurstplusChatMods());
-		add_hack(new WurstplusAutoEz());
-		add_hack(new WurstplusAntiRacist());
 		add_hack(new WurstplusAnnouncer());
+		add_hack(new WurstplusAntiRacist());
+		add_hack(new WurstplusAutoEz());
+		add_hack(new WurstplusChatMods());
+		add_hack(new WurstplusChatSuffix());
+		add_hack(new WurstplusClearChat());
+		add_hack(new WurstplusTotempop());
+		add_hack(new WurstplusVisualRange());
 
 		// Combat.
-		add_hack(new WurstplusCriticals());
-		add_hack(new WurstplusKillAura());
-		add_hack(new WurstplusSurround());
-		add_hack(new WurstplusVelocity());
-		add_hack(new WurstplusAutoCrystal());
-		add_hack(new WurstplusHoleFill());
-		add_hack(new WurstplusTrap());
-		add_hack(new WurstplusSocks());
-		add_hack(new WurstplusSelfTrap());
-		add_hack(new WurstplusAutoArmour());
 		add_hack(new WurstplusAuto32k());
-		add_hack(new WurstplusWebfill());
+		add_hack(new WurstplusAutoArmour());
+		add_hack(new WurstplusAutoCrystal());
+		add_hack(new WurstplusAutoGapple());
+		add_hack(new WurstplusAutoMine());
+		add_hack(new WurstplusAutoTotem());
 		add_hack(new WurstplusAutoWeb());
 		add_hack(new WurstplusBedAura());
+		add_hack(new WurstplusCriticals());
+		add_hack(new WurstplusHoleFill());
+		add_hack(new WurstplusKillAura());
 		add_hack(new WurstplusOffhand());
-		add_hack(new WurstplusAutoGapple());
-		add_hack(new WurstplusAutoTotem());
-		add_hack(new WurstplusAutoMine());
+		add_hack(new WurstplusSelfTrap());
+		add_hack(new WurstplusSocks());
+		add_hack(new WurstplusSurround());
+		add_hack(new WurstplusTrap());
+		add_hack(new WurstplusVelocity());
+		add_hack(new WurstplusWebfill());
 
 		// Exploit.
-		add_hack(new WurstplusXCarry());
-		add_hack(new WurstplusNoSwing());
-		add_hack(new WurstplusPortalGodMode());
-		add_hack(new WurstplusPacketMine());
-		add_hack(new WurstplusEntityMine());
 		add_hack(new WurstplusBuildHeight());
 		add_hack(new WurstplusCoordExploit());
+		add_hack(new WurstplusEntityMine());
 		add_hack(new WurstplusNoHandshake());
-
-		// Movement.
-		add_hack(new WurstplusStrafe());
-		add_hack(new WurstplusStep());
-		add_hack(new WurstplusSprint());
-		add_hack(new WurstPlusAnchor());
-		
-		// Render.
-		add_hack(new WurstplusHighlight());
-		add_hack(new WurstplusHoleESP());
-		add_hack(new WurstplusShulkerPreview());
-		add_hack(new WurstplusViewmodleChanger());
-		add_hack(new WurstplusVoidESP());
-		add_hack(new WurstplusAntifog());
-		add_hack(new WurstplusNameTags());
-		add_hack(new WurstplusFuckedDetector());
-		add_hack(new WurstplusTracers());
-		add_hack(new WurstplusSkyColour());
-		add_hack(new WurstplusChams());
-		add_hack(new WurstplusCapes());
-		add_hack(new WurstplusAlwaysNight());
-		add_hack(new WurstplusCityEsp());
+		add_hack(new WurstplusNoSwing());
+		add_hack(new WurstplusPacketMine());
+		add_hack(new WurstplusPortalGodMode());
+		add_hack(new WurstplusSpeedmine());
+		add_hack(new WurstplusXCarry());
 
 		// Misc.
 		add_hack(new WurstplusMiddleClickFriends());
@@ -100,8 +79,30 @@ public class WurstplusModuleManager {
 		add_hack(new WurstplusAutoReplenish());
 		add_hack(new WurstplusAutoNomadHut());
 		add_hack(new WurstplusFastUtil());
-		add_hack(new WurstplusSpeedmine());
 
+		// Movement.
+		add_hack(new WurstPlusAnchor());
+		add_hack(new WurstplusNoFall());
+		add_hack(new WurstplusSprint());
+		add_hack(new WurstplusStep());
+		add_hack(new WurstplusStrafe());
+
+		// Render.
+		add_hack(new WurstplusAlwaysNight());
+		add_hack(new WurstplusAntifog());
+		add_hack(new WurstplusCapes());
+		add_hack(new WurstplusChams());
+		add_hack(new WurstplusCityEsp());
+		add_hack(new WurstplusFuckedDetector());
+		add_hack(new WurstplusHighlight());
+		add_hack(new WurstplusHoleESP());
+		add_hack(new WurstplusNameTags());
+		add_hack(new WurstplusShulkerPreview());
+		add_hack(new WurstplusSkyColour());
+		add_hack(new WurstplusTracers());
+		add_hack(new WurstplusViewmodleChanger());
+		add_hack(new WurstplusVoidESP());
+		
 		// Dev
 		add_hack(new WurstplusFakePlayer());
 
@@ -129,10 +130,7 @@ public class WurstplusModuleManager {
 	}
 
 	public Vec3d process(Entity entity, double x, double y, double z) {
-		return new Vec3d(
-			(entity.posX - entity.lastTickPosX) * x,
-			(entity.posY - entity.lastTickPosY) * y,
-			(entity.posZ - entity.lastTickPosZ) * z);
+		return new Vec3d((entity.posX - entity.lastTickPosX) * x, (entity.posY - entity.lastTickPosY) * y, (entity.posZ - entity.lastTickPosZ) * z);
 	}
 
 	public Vec3d get_interpolated_pos(Entity entity, double ticks) {
