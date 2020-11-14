@@ -20,6 +20,7 @@ public class WurstplusAlwaysNight extends WurstplusHack {
     
     @EventHandler
     private Listener<WurstplusEventPacket.ReceivePacket> on_packet = new Listener<>(event -> {
+    	if (mc.world == null) return;
         if (event.get_packet() instanceof SPacketTimeUpdate) {
         	SPacketTimeUpdate packet = (SPacketTimeUpdate) event.get_packet();
         	mc.world.setTotalWorldTime(packet.getTotalWorldTime());
